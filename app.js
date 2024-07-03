@@ -1,7 +1,7 @@
 import { writeFile } from "fs";
 import pkg from 'jetpress';
-const { FormWizard, Router, Server } = pkg;
 import path from "path";
+const { FormWizard, Router, Server } = pkg;
 
 const server = new Server();
 
@@ -31,7 +31,7 @@ server.post('/upload', (req, res) => {
         return res.status(400).send('No file uploaded.');
     }
 
-    const newPath = path.join(__dirname, 'uploads', uploadedFile.filename);
+    const newPath = path.join('uploads', uploadedFile.filename);
     writeFile(newPath, uploadedFile.buffer, err => {
         if (err) throw err;
         console.log('File saved successfully:', newPath);
