@@ -3,10 +3,7 @@ import pkg from 'jetpress';
 const { FormWizard, Router, Server } = pkg;
 import path from "path";
 
-const server = new Server({
-    enableSsl: true,
-    cert: ''
-});
+const server = new Server();
 
 server.use(FormWizard);
 
@@ -59,6 +56,6 @@ server.use("*", (req, res) => {
 });
 
 // Start the server
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log('JetPress server running at http://localhost:3000');
 });
