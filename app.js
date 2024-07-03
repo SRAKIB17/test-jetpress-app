@@ -46,7 +46,7 @@ router.get("/example", (req, res) => {
 });
 server.get("/test/:params", (req, res) => {
     console.log(req.params)
-    res.json({})
+    res.json(req.params)
 })
 server.use('/api', router);
 
