@@ -24,7 +24,7 @@
     "@types/cors": "^2.8.17",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "jetpress": "^1.1.24"
+    "jetpress": "^1.1.25"
   },
   "devDependencies": {
     "@types/bun": "^1.1.6",
